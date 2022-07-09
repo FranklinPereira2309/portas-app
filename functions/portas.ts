@@ -11,3 +11,15 @@ export function criarPortas(qtd: number, selecionada: number): PortaModel[]{
         
     })
 }
+
+export function atualizarPortas(porta: PortaModel[], portaModificada: PortaModel) {
+    return porta.map(portaAtual => {
+        const igualModificada = portaAtual.numero === portaModificada.numero
+
+        if(igualModificada){
+            return portaModificada
+        }else{
+            return portaModificada.aberta? portaAtual : portaAtual.desselecionar()
+        }
+    })
+}
