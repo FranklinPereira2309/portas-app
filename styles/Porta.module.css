@@ -5,6 +5,7 @@
     width: var(--area-porta-largura);
     height: var(--area-porta-altura);
     margin: 5px;
+    position: relative;
 }
 
 .estrutura {

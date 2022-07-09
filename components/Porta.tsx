@@ -14,8 +14,6 @@ export default function Porta(props: PortaProps) {
 
     const alterarSelecao = e => {
         props.onChange(porta.alterarSelecao())
-        
-        
     }
 
     const abrir = e => {
