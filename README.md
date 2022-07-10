@@ -1,22 +1,17 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Este é um projeto desenvolvido utilizando o Next.js, com o uso de TypeScript em alguns arquivos.
 
-## Getting Started
+## Projeto Monty Hall
 
 First, run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
+
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Selecione a quantidade portas e qual vai ser a porta premiada. Tudo isso antes do "usuário ver sua escolhar", na tela principal a onde aparecem as portas, escolha tela cheia para que endereço da Url seja ocultado(ex. atalho: F11).
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+Agora o "usuário" pode tentar escolher qual é a porta premiada!!
 
 ## Learn More
 
