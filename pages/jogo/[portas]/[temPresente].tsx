@@ -7,9 +7,23 @@ import { useRouter } from "next/router"
 
 export default function jogo() {
     const [portas, setPortas] = useState([])
+    const [validar, setvalidar] = useState(false)
     
     const router = useRouter()
     
+    useEffect(()=> {
+        
+        const qtdPortas = +router.query.portas
+        const temPresente = +router.query.temPresente
+
+        const qtdePortasValidas = qtdPortas >= 3 && qtdPortas <= 100
+        const temPresenteValido = temPresente >= 1 &&  temPresente <= qtdPortas
+
+        setvalidar(qtdePortasValidas && temPresenteValido)
+      
+
+    }, [portas])
+
     useEffect(()=> {
         
         const portas = +router.query.portas
@@ -26,22 +40,21 @@ export default function jogo() {
                 setPortas(atualizarPortas(portas, novaPorta))}
 
             />
-
         })
     }
     return (
         <div className={styles.jogo}>
             <div className={styles.portas}>
-                {renderizarPortas()}
+                {validar
+                    ? renderizarPortas()
+                    : <h2>Valores inválidos</h2>
+                }
             </div>
             <div className={styles.botoes}>
                 <Link href={'/'}>
                     <button>Reiniciar Jogo</button>
                 </Link>
             </div>
-            
-            
-
         </div>
     )
 }
