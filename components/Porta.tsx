@@ -11,7 +11,8 @@ interface PortaProps {
 export default function Porta(props: PortaProps) {
     const porta = props.value
     const selecionada = porta.selecionada && !porta.aberta ? styles.selecionada : ''
-
+    
+    
     const alterarSelecao = e => {
         props.onChange(porta.alterarSelecao())
     }

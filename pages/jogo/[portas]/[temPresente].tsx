@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react"
 import Porta from "../../../components/Porta"
 import { atualizarPortas, criarPortas } from '../../../functions/portas'
-import styles from '../../../styles/jogo.module.css'
+import styles from '../../../styles/Jogo.module.css'
 import Link from 'next/link'
 import { useRouter } from "next/router"
 
-export default function jogo() {
+export default function Jogo() {
     const [portas, setPortas] = useState([])
     const [validar, setvalidar] = useState(false)
     
